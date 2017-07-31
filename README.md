@@ -1,6 +1,8 @@
 ## robotics
 Repository including some robotics functions (Matlab), such as inverse kinematics, trapezoidal profile and so on. 
 
+Homework1.m is the "main" script.
+
 ## ControlloIndipendenteAiGiunti
 This is the folder containing the simulink scheme of the entire system (Control and Dynamic). There are also some files:
   - progettoMotori.m that includes the infomations of the motors;
@@ -23,3 +25,14 @@ This is the folder containing the function for the identification of the dynamic
   - identificationTotal.m calculates the dynamic parameters considering the POI of the trajectory;
   - identificationTotal.m calculates the dynamic parameters considering the all points of the trajectory; 
   - obtainDynamicMatrices.m calculater the dynamic matrices (B, C, F and g) of the dynamic model of the robot.
+  
+## ComauSmartSixDynamic
+This folder contains the function for handling the dynamic model of Comau Smart Six.
+  
+## VrepLibraryFunction
+Some secondary function to connect the robot with the simulator enviroment VRep. In this folder there is the VRep scene, called "ComauSS.ttt" and the files to handle the connection:
+  - VREP_init.m the script that instantiate the data structure for the connection and recall InitConnectionWithSimulator.m
+  - InitConnectionWithSimulator.m takes the joint info from the VRep scene (it has to be modified in compliance with the scene);
+  - sendPoseToVRep.m is the function to send a pose to VRep;
+  - sendTrajectoryToVRep.m sends the entire trajectory, using the previous function;
+  - StopVRepSimulation.m stops the simulation (needed when there are problems);
